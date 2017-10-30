@@ -39,6 +39,69 @@ h1, h2, h3, h4 {
 	min-height: 100vh;
 }
 
+/* NAVIGATION ------------------------------------ */
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 0vh;
+	font-size: 1.5em;
+	background-color: #333;
+	opacity: 0.9;
+	overflow: hidden;
+	transition: height 0.8s;
+	.closebtn {
+		display:none;
+		position: absolute;
+		right: 40px;
+		font-size: 4em;
+		color: $primary;
+		cursor: pointer;
+	}
+	.nav-content{
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		width: 100%;
+	}
+	.social {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+	a {
+		margin: 1em;
+		color: #fff;
+	}
+	.navbtn {
+	&:after {
+			content: '';
+			display: block;
+			margin: auto;
+			height: 3px;
+			width: 0px;
+			background:transparent;
+			transition: width .5s ease, background-color .5s ease;
+		}
+		&:hover:after {
+			width: 100%;
+			background: #fff;
+		}
+	}
+}
+
+.openbtn {
+	position: fixed;
+	top: 30px;
+	right: 48px;
+	font-size: 3em;
+	color: $primary;
+	cursor: pointer;
+}
+
 /* HEADER ------------------------------------ */
 .overlay {
 	position: relative;
@@ -60,7 +123,7 @@ h1, h2, h3, h4 {
 }
 
 .header-content {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	display: flex;
@@ -87,6 +150,9 @@ h1, h2, h3, h4 {
 		text-transform: uppercase;
 		letter-spacing: 5px;
 		animation: fadeIn 1s infinite alternate;
+		a {
+			color: $primary;
+		}
 		i {
 			font-size: 1.5em;
 			margin-left: 10px;
@@ -100,63 +166,52 @@ h1, h2, h3, h4 {
   } 
 }
 
-/* NAVIGATION ------------------------------------ */
-.nav {
-	position: fixed;
-	top: 0;
-	left: 0;
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	height: 0vh;
-	font-size: 1.5em;
-	background-color: #333;
-	opacity: 0.9;
-	overflow: hidden;
-	transition: height 0.8s;
-	.closebtn {
-		display:none;
-		position: absolute;
-		right: 40px;
-		font-size: 4em;
-		color: $primary;
-	}
-	.nav-content{
-		display: flex;
-		justify-content: center;
-		align-items: flex-end;
+/* BODY ------------------------------------ */
+.main {
+	width:100%;
+	height: 100vh;
+	margin: 4em 0;
+	h3 {
+		text-align: center;
+		font-size: 2em;
+		letter-spacing: 5px;	}
+	hr {
 		width: 100%;
-	}
-	.social {
-		display: flex;
-		justify-content: center;
-		width: 100%;
-	}
-	a {
-		margin: 1em;
-		color: #fff;
-	}
-	.nav-button {
-	&:after {
-			content: '';
-			display: block;
-			margin: auto;
-			height: 3px;
-			width: 0px;
-			background:transparent;
-			transition: width .5s ease, background-color .5s ease;
-		}
-		&:hover:after {
-			width: 100%;
-			background: #fff;
-		}
+		height: 5px;
+		margin: 4em 0;
+		background-color: $primary;
+		border: none;
 	}
 }
 
-.openbtn {
-	position: fixed;
-	top: 30px;
-	right: 48px;
-	font-size: 3em;
-	color: $primary;
+.main-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 4em auto;
+	padding: 2em 0;
+	width: 80%;
+	background-color: #ededeb;
+}
+
+.item {
+	width: calc(30%);
+	margin: 1em;
+	padding: 0.5em;
+	.post-title {
+		font-size: 1.5em;
+		font-weight: bold;
+		color: $primary;
+	}
+	img {
+		width: 100%;
+		max-height: 250px;
+		margin: 10px 0;
+		border-radius: 10px;
+	}
+	.button {
+		margin: 10px 0;
+		font-weight: bold;
+		text-align: center;
+	}
 }
