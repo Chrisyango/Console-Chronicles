@@ -6,9 +6,6 @@ var nav = $(".nav")
 	$('body').css("display", "none");
 	$('body').fadeIn(1200);
 
-	$("#logo").hide();
-	$("#logo").delay(1000).slideDown("slow");
-
 	openbtn.click(function() {
 		nav.css("height", "100vh");
 		openbtn.delay(500).fadeOut(500);
