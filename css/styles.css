@@ -141,7 +141,9 @@ h1, h2, h3, h4 {
   .main h3 {
     text-align: center;
     font-size: 2em;
-    letter-spacing: 5px; }
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: normal; }
   .main hr {
     width: 100%;
     height: 5px;
@@ -175,3 +177,5 @@ h1, h2, h3, h4 {
     margin: 10px 0;
     font-weight: bold;
     text-align: center; }
+
+/* MEDIA QUERIES ------------------------------------ */
