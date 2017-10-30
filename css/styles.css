@@ -5,7 +5,7 @@
   src: url("NotCourierSans-webfont.woff"); }
 @font-face {
   font-family: Norwester;
-  src: url("Norwester.otf"); }
+  src: url("norwester.woff"); }
 /* BASE STYLES ------------------------------------ */
 * {
   box-sizing: border-box;
