@@ -111,15 +111,14 @@ h1, h2, h3, h4 {
 	height: 0vh;
 	font-size: 1.5em;
 	background-color: #333;
-	opacity: 0.8;
+	opacity: 0.9;
 	overflow: hidden;
 	transition: height 0.8s;
 	.closebtn {
-		display: none;
+		display:none;
 		position: absolute;
-		top: 10px;
-		right: 30px;
-		font-size: 2.5em;
+		right: 40px;
+		font-size: 4em;
 		color: $primary;
 	}
 	.nav-content{
@@ -156,8 +155,8 @@ h1, h2, h3, h4 {
 
 .openbtn {
 	position: fixed;
-	top: 20px;
-	right: 30px;
-	font-size: 2.5em;
+	top: 30px;
+	right: 48px;
+	font-size: 3em;
 	color: $primary;
 }
