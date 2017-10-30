@@ -13,6 +13,9 @@ a {
   text-decoration: none;
   color: #333; }
 
+h1, h2, h3, h4 {
+  font-family: 'Saira Semi Condensed', sans-serif; }
+
 .container {
   width: 100%;
   min-height: 100vh; }
