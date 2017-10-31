@@ -1,10 +1,11 @@
 $(document).ready(function() {
 
-	$('body').css("display", "none");
-	$('body').fadeIn(2000);
+	$("body").css("display", "none");
+	$("body").fadeIn(2000);
 
-	$('.header-content').css("display", "none");
-	$('.header-content').delay(2100).fadeIn(3000);
+	$(".header-content").css("display", "none");
+	$(".header-content").delay(2100).fadeIn(2200);
+
 /* NAVIGATION --------------------------------- */
 	var openbtn = $(".openbtn")
 	var closebtn = $(".closebtn")
@@ -41,10 +42,10 @@ $(document).ready(function() {
     		var hash = this.hash;
 
       // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-    		$('html, body').delay(800).animate({
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    		$('html, body').delay(900).animate({
     			scrollTop: $(hash).offset().top
-    		}, 800, function(){
+    		}, 1000, function(){
    
         // Add hash (#) to URL when done scrolling (default click behavior)
     		window.location.hash = hash;
@@ -59,7 +60,7 @@ $(document).ready(function() {
     		var hash = this.hash;
     		$('html, body').delay().animate({
     			scrollTop: $(hash).offset().top
-    		}, 800, function(){
+    		}, 1000, function(){
     		window.location.hash = hash;
     		});
     	}

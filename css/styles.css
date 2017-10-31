@@ -83,7 +83,8 @@ h1, h2, h3, h4 {
   right: 48px;
   font-size: 3em;
   color: #ef4450;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 100; }
 
 /* HEADER ------------------------------------ */
 .overlay {
@@ -91,8 +92,9 @@ h1, h2, h3, h4 {
   width: 100%;
   height: 100vh;
   background-image: url("../images/hero.jpg");
+  background-attachment: fixed;
   background-size: cover;
-  background-position: 50% 0; }
+  background-position: center; }
 
 .overlay:after {
   content: "";
@@ -211,3 +213,12 @@ img {
   height: 600px; }
 
 /* MEDIA QUERIES ------------------------------------ */
+@media only screen and (max-width: 1024px) {
+  .openbtn {
+    font-size: 5em; }
+
+  .nav {
+    font-size: 2em; }
+    .nav .closebtn {
+      font-size: 6em;
+      top: -10px; } }
