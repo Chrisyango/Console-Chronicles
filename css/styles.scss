@@ -1,5 +1,6 @@
 /* COLORS ------------------------------------ */
 $primary: #ef4450;
+$accent: #022e3c;
 
 /* FONTS ------------------------------------ */
 @font-face {
@@ -26,8 +27,8 @@ $primary: #ef4450;
 
 html, body {
 	font-family: "NotCourierSans"; 
-	background-color: #fff;
-	color: #333;
+	background-color: #023140;
+	color: #fff;
 }
 
 a {
@@ -37,6 +38,12 @@ a {
 
 h1, h2, h3, h4 {
 	font-family: "Norwester";
+	color: $primary;
+}
+
+img {
+	width: 100%;
+	height: 100%;
 }
 
 .container {
@@ -152,8 +159,6 @@ h1, h2, h3, h4 {
 		margin-bottom: 15px;
 	}
 	h2 {
-		display: flex;
-		align-items: center;
 		font-size: 2em;
 		text-transform: uppercase;
 		letter-spacing: 5px;
@@ -178,7 +183,7 @@ h1, h2, h3, h4 {
 .main {
 	width:100%;
 	margin: 4em 0;
-	h3 {
+	h2 {
 		text-align: center;
 		font-size: 2em;
 		letter-spacing: 3px;
@@ -224,13 +229,6 @@ h1, h2, h3, h4 {
 	}
 }
 
-
-img {
-	width: 100%;
-	height: 100%;
-	border-radius: 10px;
-}
-
 .grid-sizer,
 .item {
 	width: 20%;
@@ -257,6 +255,122 @@ img {
 }
 .item-height3 {
 	height: 600px;
+}
+
+
+/* VIDEO and PODCAST ------------------------------------ */
+.video,
+.podcast {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	p {
+		width: 100%;
+		text-align: center;
+		font-family: NotCourierSansBold;
+	}
+	h2 {
+		width: 70%;
+		margin: auto;
+		text-align: center;
+		font-size: 2.5em;
+		text-transform: uppercase;
+		&:before,
+		&:after {
+			content: "";
+			display: inline-block;
+			width: 20%;
+			margin: 0 0.5em 0.6em 0;
+			border-bottom: 5px solid transparent;
+			border-image: linear-gradient(to right, #fff 50%, #023140 100%);
+			border-image-slice: 1;
+			opacity: 0.15;
+	
+		}
+		&:after {
+			margin: 0 0 0.6em 0.5em;
+			border-image: linear-gradient(to left, #fff 50%, #023140 100%);
+			border-image-slice: 1;
+		}
+	}
+}
+
+.video-content, 
+.podcast-content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50%;
+		height: 75%;
+		margin: 2em auto;
+		background: $accent;
+		border-radius: 7em;
+	}
+iframe {
+	width: 75%;
+	height: 75%;
+}
+
+.podcast-bg {
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	background-color: $primary;
+}
+
+.podcast-content {
+	width: 75%;
+}
+
+.podcast-carousel {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	.arrows {
+		display: flex;
+		justify-content: space-between;
+		width: 70%;
+		z-index: 100;
+	}
+	.prev,
+	.prev2,
+	.next,
+	.next2 {
+		position: absolute;
+		width: 60%;
+		height: 80%;
+		box-shadow: 1px 1px 50px #333;
+		transform: translateX(-10%);
+		transition: all 0.5s;
+		z-index: 5;
+	}
+	.prev2 {
+		height: 70%;
+		transform: translateX(-20%);
+		z-index: 4;
+	}
+	.next {
+		transform: translateX(10%);
+	}
+	.next2 {
+		height: 70%;
+		transform: translateX(20%);
+		z-index: 4;
+	}
+	.selected {
+		position: absolute;
+		width: 60%;
+		height: 90%;
+		box-shadow: 1px 1px 50px #333;
+		z-index: 10;
+	}
 }
 
 /* MEDIA QUERIES ------------------------------------ */
