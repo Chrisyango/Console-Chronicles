@@ -17,8 +17,8 @@
 
 html, body {
   font-family: "NotCourierSans";
-  background-color: #023140;
-  color: #fff; }
+  background-color: #fff;
+  color: #333; }
 
 a {
   text-decoration: none;
@@ -218,22 +218,22 @@ img {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh; }
-  .video p,
-  .podcast p {
-    width: 100%;
+  height: 100vh;
+  margin: 4em 0; }
+
+.media-title {
+  width: 100%;
+  padding-top: 4em; }
+  .media-title p {
     text-align: center;
     font-family: NotCourierSansBold; }
-  .video h2,
-  .podcast h2 {
+  .media-title h2 {
     width: 70%;
     margin: auto;
     text-align: center;
     font-size: 2.5em;
     text-transform: uppercase; }
-    .video h2:before, .video h2:after,
-    .podcast h2:before,
-    .podcast h2:after {
+    .media-title h2:before, .media-title h2:after {
       content: "";
       display: inline-block;
       width: 20%;
@@ -242,8 +242,7 @@ img {
       border-image: linear-gradient(to right, #fff 50%, #023140 100%);
       border-image-slice: 1;
       opacity: 0.15; }
-    .video h2:after,
-    .podcast h2:after {
+    .media-title h2:after {
       margin: 0 0 0.6em 0.5em;
       border-image: linear-gradient(to left, #fff 50%, #023140 100%);
       border-image-slice: 1; }
@@ -253,10 +252,9 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  height: 75%;
-  margin: 2em auto;
-  background: #022e3c;
+  width: 40%;
+  height: 70%;
+  margin-bottom: 4em;
   border-radius: 7em; }
 
 iframe {
@@ -266,11 +264,11 @@ iframe {
 .podcast-bg {
   position: absolute;
   width: 100%;
-  height: 50%;
+  height: 30%;
   background-color: #ef4450; }
 
 .podcast-content {
-  width: 75%; }
+  width: 60%; }
 
 .podcast-carousel {
   position: relative;
@@ -278,7 +276,7 @@ iframe {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 90%;
   z-index: 10; }
   .podcast-carousel .arrows {
     display: flex;
@@ -294,7 +292,7 @@ iframe {
     height: 80%;
     box-shadow: 1px 1px 50px #333;
     transform: translateX(-10%);
-    transition: all 0.5s;
+    transition: all 0.8s;
     z-index: 5; }
   .podcast-carousel .prev2 {
     height: 70%;
@@ -311,6 +309,7 @@ iframe {
     width: 60%;
     height: 90%;
     box-shadow: 1px 1px 50px #333;
+    transition: all 0.8s;
     z-index: 10; }
 
 /* MEDIA QUERIES ------------------------------------ */
